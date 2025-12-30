@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Starting your environment…</h3>
+  <script>
+    async function poll() {
+      const res = await fetch("/status");
+      const data = await res.json();
+      if (data.ready) {
+        window.location.href = data.url;
+      } else {
+        setTimeout(poll, 1000);
+      }
+    }
+    poll();
+  </script>
+</body>
+</html>
