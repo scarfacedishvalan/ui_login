@@ -10,7 +10,7 @@ templates = Jinja2Templates(directory="templates")
 
 CODE_SERVER_PORT = 8080
 CODE_SERVER_URL = f"http://localhost:{CODE_SERVER_PORT}"
-SCRIPT_PATH = "launcher.sh"
+SCRIPT_PATH = "/home/candidate/ui/ui_login/launcher.sh"
 RUN_AS_USER = "candidate"
 
 def is_port_open(host, port):
